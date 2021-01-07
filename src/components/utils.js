@@ -36,7 +36,7 @@ export const mergeValuesToLeft = (board) => (
 
 export const mergeValuesToRight = (board) => (
     board.map((row) => {
-        const newRow = _.cloneDeep(row);
+        const newRow = [...row];
         for (let i = row.length - 1; i > 0; i--) {
             if (newRow[i] !== 0 && newRow[i] === newRow[i - 1]) {
                 newRow[i] *= 2;

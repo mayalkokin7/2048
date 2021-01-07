@@ -12,7 +12,6 @@ const colors = {
     64: '#f75f3b'
 };
 
-console.log(colors);
 const Cell = ({ value }) => (
     <td>
         <div
