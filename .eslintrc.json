@@ -1,0 +1,92 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb"
+  ],
+  "plugins": [
+    "react-hooks"
+  ],
+  "rules": {
+    "no-debugger": "off",
+    "no-use-before-define": "off",
+    "array-callback-return": "off",
+    "consistent-return": "off",
+    "no-undef": "off",
+    "no-shadow": "off",
+    "no-unused-vars": "off",
+    "react/button-has-type": "off",
+    " no-unused-vars": "off",
+    "import/order": "off",
+    "react/jsx-indent-props": "off",
+    "react/prop-types": "off",
+    "react/jsx-filename-extension": "off",
+    "react/forbid-prop-types": "warn",
+    "import/prefer-default-export": "off",
+    "react/no-array-index-key": "warn",
+    "no-restricted-syntax": "off",
+    "no-trailing-spaces": "off",
+    // really annoying and fixable automatically anyways (--fix)
+    "no-plusplus": "off",
+    "jsx-a11y/alt-text": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/anchor-has-content": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/no-noninteractive-tabindex": "off",
+    "no-underscore-dangle": "warn",
+    "react/no-did-update-set-state": "warn",
+    "react/no-did-mount-set-state": "warn",
+    "object-curly-newline": "off",
+    "no-nested-ternary": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-closing-bracket-location": "off",
+    "react/jsx-closing-tag-location": "off",
+    // This one is really bad, it contradicts another rule
+    "react/sort-comp": "off",
+    "prefer-destructuring": "warn",
+    // This one is wrong sometimes
+    "linebreak-style": "off",
+    "no-multiple-empty-lines": [
+      "warn",
+      {
+        "max": 1
+      }
+    ],
+    "comma-dangle": [
+      "warn",
+      "never"
+    ],
+    "indent": [
+      "warn",
+      4,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "react/jsx-indent": [
+      "warn",
+      4
+    ],
+    "max-len": [
+      "warn",
+      160
+    ]
+  },
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "globals": {
+    // `false` means no assignment
+    "_": false,
+    "angular": false,
+    "$": false,
+    "toastr": false,
+    "Mousetrap": false,
+    "kendo": false,
+    "saveAs": false
+    // TODO this is currently in lib/FileSaver.js - we should npm install it and use it normally :)
+  }
+}
