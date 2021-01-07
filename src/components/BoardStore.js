@@ -34,7 +34,6 @@ export const BoardStore = ({ children }) => {
             let newBoard = shiftRight(board);
             newBoard = mergeValuesToRight(newBoard);
             newBoard = addCell(newBoard);
-            setBoard((board) => newBoard);
             return newBoard;
         });
     };
@@ -44,7 +43,6 @@ export const BoardStore = ({ children }) => {
             let newBoard = shiftLeft(board);
             newBoard = mergeValuesToLeft(newBoard);
             newBoard = addCell(newBoard);
-            setBoard((board) => newBoard);
             return newBoard;
         });
     };
