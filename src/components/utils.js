@@ -11,9 +11,10 @@ export const shiftRight = (board) => board.map((row) => {
 
 export const shiftLeft = (board) => board.map((row) => {
     const newRow = [];
-    row.forEach((cell) => {
-        if (cell === 0) newRow.push(cell);
-        else newRow.unshift(cell);
+    row.forEach((cell, i) => {
+        const len = row.length;
+        if (row[len - 1 - i] === 0) newRow.push(row[len - 1 - i]);
+        else newRow.unshift(row[len - 1 - i]);
     });
     return newRow;
 });
@@ -35,8 +36,8 @@ export const mergeValuesToLeft = (board) => (
 
 export const mergeValuesToRight = (board) => (
     board.map((row) => {
-        const newRow = [...row];
-        for (let i = row.length - 1; i >= 0; i--) {
+        const newRow = _.cloneDeep(row);
+        for (let i = row.length - 1; i > 0; i--) {
             if (newRow[i] !== 0 && newRow[i] === newRow[i - 1]) {
                 newRow[i] *= 2;
                 newRow[i - 1] = 0;
